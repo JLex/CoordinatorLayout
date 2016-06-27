@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Coordinator0">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        // Toolbar
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways">
+            <!-- Tengo la opcion de sólo "Scroll" -->
+        </android.support.v7.widget.Toolbar>
+
+        // Tabs
+        <android.support.design.widget.TabLayout
+            android:id="@+id/app_bar_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabTextColor="@android:color/white"
+            app:tabSelectedTextColor="@android:color/white"/>
+
+        <!--
+            **********************************************
+            NECESITO CAMBIAR EL COLOR DE TEXTO DE MIS TABS
+            **********************************************
+        -->
+
+
+            <!-- Al agregar esta línea:
+            app:layout_scrollFlags="scroll|enterAlways"
+                 hace que Los Tabs tengan el mismo efecto
+                 que la Toolbar
+            -->
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    // Recycler Contenido
+    <include
+        layout="@layout/recycler"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</android.support.design.widget.CoordinatorLayout>
