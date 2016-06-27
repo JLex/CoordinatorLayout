@@ -20,7 +20,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:elevation="4dp"
             app:layout_scrollFlags="scroll|enterAlways">
-            <!-- Tengo la opcion de sólo "Scroll" -->
+            <!-- Tengo la opcion de sólo "scroll" -->
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
