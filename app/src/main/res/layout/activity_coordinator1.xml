@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".Coordinator0">
 
     <android.support.design.widget.AppBarLayout
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        // Toolbar
+        <!-- Toolbar -->
         <android.support.v7.widget.Toolbar
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
@@ -22,7 +23,7 @@
             <!-- Tengo la opcion de sólo "Scroll" -->
         </android.support.v7.widget.Toolbar>
 
-        // Tabs
+        <!-- Tabs -->
         <android.support.design.widget.TabLayout
             android:id="@+id/app_bar_tabs"
             android:layout_width="match_parent"
@@ -49,7 +50,7 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    // Recycler Contenido
+    <!-- Recycler Contenido -->
     <include
         layout="@layout/recycler"
         android:layout_marginTop="?attr/actionBarSize"
