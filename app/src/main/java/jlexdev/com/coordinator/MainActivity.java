@@ -8,7 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-
+/**  Fuente:
+ *   http://www.sgoliver.net/blog/animaciones-basicas-coordinatorlayout/
+ */
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ListView lstOpciones;
@@ -23,13 +25,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         String[] datos =
                 new String[]{
-                        "Hide AppBar",
-                        "Hide AppBar + Tabs",
-                        "Toolbar 3",
-                        "Toolbar 4",
-                        "Toolbar 5",
-                        "Toolbar 6",
-                        "Toolbar 7"
+                        "1. Hide AppBar",
+                        "2. Hide AppBar + Tabs",
+                        "3. Fab elevation by Snackbar",
+                        "4. Collapsing Toolbar",
+                        "5. Fab + Collapsing toolbar",
+                        "6. Collapsing con Fondo"
                 };
 
         ArrayAdapter<String> adaptador =
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
+    // Llamada a Eventos
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -51,38 +53,38 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             case 0:
                 Intent intent0 =
-                        new Intent(this, Coordinator0.class);
+                        new Intent(this, Coordinator1.class);
                 startActivity(intent0);
                 break;
 
             case 1:
                 Intent intent1 =
-                        new Intent(this, Coordinator1.class);
+                        new Intent(this, Coordinator2.class);
                 startActivity(intent1);
                 break;
 
             case 2:
                 Intent intent2 =
-                        new Intent(this, Coordinator2.class);
+                        new Intent(this, Coordinator3.class);
                 startActivity(intent2);
                 break;
 
             case 3:
                 Intent intent3 =
-                        new Intent(this, Coordinator2.class);
+                        new Intent(this, Coordinator4.class);
                 startActivity(intent3);
                 break;
 
             case 4:
                 Intent intent4 =
-                        new Intent(this, Coordinator0.class);
+                        new Intent(this, Coordinator5.class);
                 startActivity(intent4);
                 break;
 
             case 5:
-                Intent intent5 =
-                        new Intent(this, Coordinator0.class);
-                startActivity(intent5);
+                Intent intent6 =
+                        new Intent(this, Coordinator6.class);
+                startActivity(intent6);
                 break;
 
 

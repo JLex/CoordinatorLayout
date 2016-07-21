@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Contenedor Collapsing -->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/ct_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <!-- Atributos a usar en el scrollFlags:
+                 "scroll", "enterAlways", "exitUntilCollapsed",
+                 "enteralwaysCollapsed" // Revisar <Fuente> -->
+
+            <!-- Toolbar -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+                app:layout_collapseMode="pin"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!-- Recycler Contenido -->
+    <include
+        layout="@layout/recycler"/>
+
+
+    <!-- FAB -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vector_drawable_ic_add"
+        app:borderWidth="0dp"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_marginRight="7dp"/>
+
+</android.support.design.widget.CoordinatorLayout>
+
+    <!-- Similar al Coordinator4, pero:
+       * Agrego Fab.
+       * Cambio "margin" y "gravity" por
+         "anchor": Control donde fijaré mi fab (AppBarLayout)
+         "anchorGravity": Ubicación de mi fab en el control fijado.
+
+       * PD: El Fab se fija en el AppBarLayout y no
+             en la Toolbar. ;D
+      -->

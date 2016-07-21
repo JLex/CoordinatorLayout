@@ -1,15 +1,18 @@
 package jlexdev.com.coordinator;
 
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import java.util.ArrayList;
 
-public class Coordinator1 extends AppCompatActivity {
 
+public class Coordinator3 extends AppCompatActivity implements View.OnClickListener {
 
     /* ********************************* */
     private RecyclerView recyclerView;
@@ -18,14 +21,15 @@ public class Coordinator1 extends AppCompatActivity {
     private ArrayList<Recycler> datos;
     /* ********************************* */
 
+    private FloatingActionButton btnFab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coordinator1);
-
+        setContentView(R.layout.activity_coordinator3);
         Toolbar toolbar = (Toolbar)findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Hide AppBar"); // Título toolbar
+        getSupportActionBar().setTitle("Fab elevation by Snackbar"); // Título toolbar
 
 
         /* *************************************************************** */
@@ -65,6 +69,15 @@ public class Coordinator1 extends AppCompatActivity {
         /* *************************************************************** */
 
 
+        // FAB
+        btnFab = (FloatingActionButton)findViewById(R.id.btn_fab);
+        btnFab.setOnClickListener(this);
+    }
+
+    // Evento FAB
+    @Override
+    public void onClick(View v) {
+        Snackbar.make(v, "Presionaste el Fab :P", Snackbar.LENGTH_SHORT).show();
     }
 
 }

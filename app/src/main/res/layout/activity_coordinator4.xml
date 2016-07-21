@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Contenedor Collapsing -->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/ct_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <!-- Atributos a usar en el scrollFlags:
+                 "scroll", "enterAlways", "exitUntilCollapsed",
+                 "enteralwaysCollapsed" // Revisar <Fuente> -->
+
+            <!-- Toolbar -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+                app:layout_collapseMode="pin"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!-- Recycler Contenido -->
+    <include
+        layout="@layout/recycler"/>
+
+</android.support.design.widget.CoordinatorLayout>
+
+    <!-- Símilar a Coordinator1, pero:
+      *  Extiendo (H) a 192dp el AppBarLayout.
+      *  Agrego fitSystemWindows al AppBarLayout, de lo contrario
+         me tapará la mitad del título en la Toolbar.
+      *  Agrego contenedor Collapsing.
+      *  Ya no necesito scrollFlags en la Toolbar, sino en el Contenedor.
+      *  Agrego atributo collapseMode a la Toolbar,
+         (Para mantener fijos los botones de la ActionBar)
+      -->

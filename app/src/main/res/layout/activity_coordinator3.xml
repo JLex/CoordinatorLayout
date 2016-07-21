@@ -6,32 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".Coordinator0">
-
+    tools:context=".Coordinator3">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- Toolbar -->
         <android.support.v7.widget.Toolbar
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:layout_scrollFlags="scroll|enterAlways">
-
-            <!-- Tengo la opcion de sólo "scroll" -->
-        </android.support.v7.widget.Toolbar>
-
+            app:layout_scrollFlags="scroll|enterAlways"/>
     </android.support.design.widget.AppBarLayout>
-
 
 
     <!-- Recycler Contenido -->
     <include
         layout="@layout/recycler"/>
 
+    <!-- FAB -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vector_drawable_ic_add"
+        app:borderWidth="0dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="end|bottom"/>
 
 </android.support.design.widget.CoordinatorLayout>
+
+<!-- Símilar a Coordinator1, pero agrego FAB -->

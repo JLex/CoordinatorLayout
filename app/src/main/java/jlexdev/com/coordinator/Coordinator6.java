@@ -1,15 +1,17 @@
 package jlexdev.com.coordinator;
 
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-public class Coordinator1 extends AppCompatActivity {
-
+public class Coordinator6 extends AppCompatActivity {
 
     /* ********************************* */
     private RecyclerView recyclerView;
@@ -18,15 +20,20 @@ public class Coordinator1 extends AppCompatActivity {
     private ArrayList<Recycler> datos;
     /* ********************************* */
 
+    private CollapsingToolbarLayout ctLayout;
+    private FloatingActionButton btnFab;
+    private ImageView imgToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coordinator1);
+        setContentView(R.layout.activity_coordinator6);
+
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Hide AppBar"); // Título toolbar
-
+        /** En lugar de ésta línea irá la -Final
+         getSupportActionBar().setTitle("Collapsing Toolbar1"); // Título toolbar */
 
         /* *************************************************************** */
         recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
@@ -65,6 +72,14 @@ public class Coordinator1 extends AppCompatActivity {
         /* *************************************************************** */
 
 
-    }
+        // Collapsing Toolbar Layout
+        ctLayout = (CollapsingToolbarLayout)findViewById(R.id.ct_layout);
+        ctLayout.setTitle("Collapsing Fondo"); // Titulo New toolbar
 
+        // Fab
+        btnFab = (FloatingActionButton)findViewById(R.id.btn_fab);
+
+        // Fondo del Toolbar
+        imgToolbar = (ImageView)findViewById(R.id.img_toolbar);
+    }
 }

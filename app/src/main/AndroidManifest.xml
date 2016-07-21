@@ -15,9 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Coordinator0" />
+        <activity android:name=".Coordinator1" />
+        <activity android:name=".Coordinator3" />
         <activity android:name=".Coordinator2" />
-        <activity android:name=".Coordinator1"></activity>
+        <activity android:name=".Coordinator4" />
+        <activity android:name=".Coordinator5" />
+        <activity android:name=".Coordinator6"></activity>
     </application>
 
 </manifest>

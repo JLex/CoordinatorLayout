@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".Coordinator0">
+    tools:context=".Coordinator1">
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -19,43 +20,18 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways">
-            <!-- Tengo la opcion de sólo "Scroll" -->
-        </android.support.v7.widget.Toolbar>
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways"/>
 
-        <!-- Tabs -->
-        <android.support.design.widget.TabLayout
-            android:id="@+id/app_bar_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            app:tabMode="fixed"
-            app:tabGravity="fill"
-            app:tabTextColor="@android:color/white"
-            app:tabSelectedTextColor="@android:color/white"/>
-
-        <!--
-            **********************************************
-            NECESITO CAMBIAR EL COLOR DE TEXTO DE MIS TABS
-            **********************************************
-        -->
-
-
-            <!-- Al agregar esta línea:
-            app:layout_scrollFlags="scroll|enterAlways"
-                 hace que Los Tabs tengan el mismo efecto
-                 que la Toolbar
-            -->
+            <!-- Tengo la opcion de sólo "scroll" -->
 
     </android.support.design.widget.AppBarLayout>
 
 
+
     <!-- Recycler Contenido -->
     <include
-        layout="@layout/recycler"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        layout="@layout/recycler"/>
+
 
 </android.support.design.widget.CoordinatorLayout>
